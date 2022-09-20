@@ -1,0 +1,14 @@
+version: '3'
+services:
+  api:
+    build: .
+    container_name: mystery-box-be
+    restart: unless-stopped
+    volumes:
+      - ./src:/home/node/app/src
+      - ./.babelrc:/home/node/app/.babelrc
+      - ./.env:/home/node/app/.env
+      - ./pm2.json:/home/node/app/pm2.json
+      - ./index.js:/home/node/app/index.js
+    ports:
+      - "3000:3000"

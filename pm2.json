@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "mystery-box",
+            "script": "npm",
+            "args": "start",
+            "exec_mode": "cluster_mode",
+            "env": {"NODE_ENV" : "production"},
+            "watch": ["src"]
+        }
+    ]
+}

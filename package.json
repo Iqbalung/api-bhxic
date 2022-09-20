@@ -1,0 +1,56 @@
+{
+  "name": "api-bhxic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules/,./.git/,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node ./dist/index.js",
+    "collection-scripts": "npx babel-node --presets @babel/preset-env src/scripts/index.js",
+    "dev": "nodemon --exec babel-node index.js",
+    "eslint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rizqirenaldy27@github.com/Iqbalung/api-bhxic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iqbalung/api-bhxic/issues"
+  },
+  "homepage": "https://github.com/Iqbalung/api-bhxic#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.19.0",
+    "@joi/date": "^2.1.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.37",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.6.1",
+    "mongoose-paginate-v2": "^1.7.1",
+    "morgan": "^1.10.0",
+    "randomstring": "^1.2.2",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/node": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.23.1",
+    "nodemon": "^2.0.19"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
